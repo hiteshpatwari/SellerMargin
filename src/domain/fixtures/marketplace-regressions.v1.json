@@ -1,0 +1,209 @@
+{
+  "version": "marketplace-regressions-v1",
+  "fixtures": [
+    {
+      "id": "etsy-us-organic-35",
+      "input": {
+        "productName": "Etsy organic fixture",
+        "sellingPrice": 3500,
+        "marketplace": "etsy",
+        "customerShippingCharge": 0,
+        "marketplaceCollectedTax": 0,
+        "productCost": 900,
+        "packagingCost": 150,
+        "sellerShippingCost": 600,
+        "advertisingCost": 0,
+        "otherCosts": 0,
+        "discountBps": 0,
+        "settings": {
+          "sellerRegion": "US",
+          "etsyIncludeListingFee": true,
+          "etsySaleSource": "organic",
+          "etsyOffsiteAdsTier": "unselected",
+          "ebaySellerPlan": "unselected",
+          "ebayCategory": "unselected",
+          "ebaySellerStatus": "unselected",
+          "ebaySaleSource": "organic",
+          "ebayPromotedListingRateBps": 0,
+          "ebayIncludeInsertionFee": false,
+          "customPercentageRateBps": 500,
+          "customFixedFee": 30,
+          "customListingFee": 0
+        }
+      },
+      "expectedFees": [["etsy-listing", 20], ["etsy-transaction", 228], ["etsy-payments", 130]],
+      "expectedMarketplaceFees": 378,
+      "expectedProfit": 1472
+    },
+    {
+      "id": "etsy-us-offsite-reduced-default",
+      "input": {
+        "productName": "Etsy Offsite Ads fixture",
+        "sellingPrice": 4800,
+        "marketplace": "etsy",
+        "customerShippingCharge": 495,
+        "marketplaceCollectedTax": 0,
+        "productCost": 1250,
+        "packagingCost": 125,
+        "sellerShippingCost": 575,
+        "advertisingCost": 0,
+        "otherCosts": 0,
+        "discountBps": 0,
+        "settings": {
+          "sellerRegion": "US",
+          "etsyIncludeListingFee": true,
+          "etsySaleSource": "offsite",
+          "etsyOffsiteAdsTier": "reduced",
+          "ebaySellerPlan": "unselected",
+          "ebayCategory": "unselected",
+          "ebaySellerStatus": "unselected",
+          "ebaySaleSource": "organic",
+          "ebayPromotedListingRateBps": 0,
+          "ebayIncludeInsertionFee": false,
+          "customPercentageRateBps": 500,
+          "customFixedFee": 30,
+          "customListingFee": 0
+        }
+      },
+      "expectedFees": [["etsy-listing", 20], ["etsy-transaction", 344], ["etsy-payments", 184], ["etsy-offsite-ads", 635]],
+      "expectedMarketplaceFees": 1183,
+      "expectedProfit": 2162
+    },
+    {
+      "id": "ebay-us-no-store-most-28-68",
+      "input": {
+        "productName": "eBay standard fixture",
+        "sellingPrice": 2868,
+        "marketplace": "ebay",
+        "customerShippingCharge": 0,
+        "marketplaceCollectedTax": 0,
+        "productCost": 900,
+        "packagingCost": 150,
+        "sellerShippingCost": 600,
+        "advertisingCost": 0,
+        "otherCosts": 0,
+        "discountBps": 0,
+        "settings": {
+          "sellerRegion": "US",
+          "etsyIncludeListingFee": true,
+          "etsySaleSource": "organic",
+          "etsyOffsiteAdsTier": "unselected",
+          "ebaySellerPlan": "no-store",
+          "ebayCategory": "most",
+          "ebaySellerStatus": "meeting",
+          "ebaySaleSource": "organic",
+          "ebayPromotedListingRateBps": 0,
+          "ebayIncludeInsertionFee": false,
+          "customPercentageRateBps": 500,
+          "customFixedFee": 30,
+          "customListingFee": 0
+        }
+      },
+      "expectedFees": [["ebay-final-value", 390], ["ebay-per-order", 40]],
+      "expectedMarketplaceFees": 430,
+      "expectedProfit": 788
+    },
+    {
+      "id": "ebay-us-no-store-below-standard-long-term",
+      "input": {
+        "productName": "eBay status fixture",
+        "sellingPrice": 3500,
+        "marketplace": "ebay",
+        "customerShippingCharge": 0,
+        "marketplaceCollectedTax": 0,
+        "productCost": 900,
+        "packagingCost": 150,
+        "sellerShippingCost": 600,
+        "advertisingCost": 0,
+        "otherCosts": 0,
+        "discountBps": 0,
+        "settings": {
+          "sellerRegion": "US",
+          "etsyIncludeListingFee": true,
+          "etsySaleSource": "organic",
+          "etsyOffsiteAdsTier": "unselected",
+          "ebaySellerPlan": "no-store",
+          "ebayCategory": "most",
+          "ebaySellerStatus": "below-standard-long-term",
+          "ebaySaleSource": "organic",
+          "ebayPromotedListingRateBps": 0,
+          "ebayIncludeInsertionFee": false,
+          "customPercentageRateBps": 500,
+          "customFixedFee": 30,
+          "customListingFee": 0
+        }
+      },
+      "expectedFees": [["ebay-final-value", 476], ["ebay-per-order", 40], ["ebay-performance-surcharge", 245]],
+      "expectedMarketplaceFees": 761,
+      "expectedProfit": 1089
+    },
+    {
+      "id": "etsy-us-offsite-standard-with-shipping-and-tax",
+      "input": {
+        "productName": "Etsy tax and Offsite Ads fixture",
+        "sellingPrice": 5000,
+        "marketplace": "etsy",
+        "customerShippingCharge": 500,
+        "marketplaceCollectedTax": 440,
+        "productCost": 1200,
+        "packagingCost": 100,
+        "sellerShippingCost": 650,
+        "advertisingCost": 0,
+        "otherCosts": 0,
+        "discountBps": 0,
+        "settings": {
+          "sellerRegion": "US",
+          "etsyIncludeListingFee": true,
+          "etsySaleSource": "offsite",
+          "etsyOffsiteAdsTier": "standard",
+          "ebaySellerPlan": "unselected",
+          "ebayCategory": "unselected",
+          "ebaySellerStatus": "unselected",
+          "ebaySaleSource": "organic",
+          "ebayPromotedListingRateBps": 0,
+          "ebayIncludeInsertionFee": false,
+          "customPercentageRateBps": 500,
+          "customFixedFee": 30,
+          "customListingFee": 0
+        }
+      },
+      "expectedFees": [["etsy-listing", 20], ["etsy-transaction", 358], ["etsy-payments", 203], ["etsy-offsite-ads", 825]],
+      "expectedMarketplaceFees": 1406,
+      "expectedProfit": 2144
+    },
+    {
+      "id": "ebay-us-basic-collectibles-status-promoted",
+      "input": {
+        "productName": "eBay conditional fee fixture",
+        "sellingPrice": 25000,
+        "marketplace": "ebay",
+        "customerShippingCharge": 1500,
+        "marketplaceCollectedTax": 2120,
+        "productCost": 11000,
+        "packagingCost": 400,
+        "sellerShippingCost": 1200,
+        "advertisingCost": 500,
+        "otherCosts": 0,
+        "discountBps": 0,
+        "settings": {
+          "sellerRegion": "US",
+          "etsyIncludeListingFee": true,
+          "etsySaleSource": "organic",
+          "etsyOffsiteAdsTier": "unselected",
+          "ebaySellerPlan": "basic",
+          "ebayCategory": "collectibles",
+          "ebaySellerStatus": "below-standard-long-term",
+          "ebaySaleSource": "promoted",
+          "ebayPromotedListingRateBps": 500,
+          "ebayIncludeInsertionFee": true,
+          "customPercentageRateBps": 500,
+          "customFixedFee": 30,
+          "customListingFee": 0
+        }
+      },
+      "expectedFees": [["ebay-insertion", 25], ["ebay-final-value", 3535], ["ebay-per-order", 40], ["ebay-performance-surcharge", 2003], ["ebay-promoted", 1431]],
+      "expectedMarketplaceFees": 7034,
+      "expectedProfit": 6366
+    }
+  ]
+}

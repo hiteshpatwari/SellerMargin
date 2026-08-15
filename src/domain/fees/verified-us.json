@@ -1,0 +1,194 @@
+{
+  "schemaVersion": 2,
+  "region": "US",
+  "currency": "USD",
+  "profiles": {
+    "etsy": {
+      "marketplace": "etsy",
+      "region": "US",
+      "currency": "USD",
+      "version": "etsy-us-2026-08-v1",
+      "effectiveDate": "2026-08-14",
+      "lastVerifiedDate": "2026-08-14",
+      "reviewIntervalDays": 90
+    },
+    "ebayStandard": {
+      "marketplace": "ebay",
+      "region": "US",
+      "currency": "USD",
+      "version": "ebay-us-standard-2026-07-v1",
+      "effectiveDate": "2026-07-01",
+      "lastVerifiedDate": "2026-08-14",
+      "reviewIntervalDays": 60
+    },
+    "ebayStore": {
+      "marketplace": "ebay",
+      "region": "US",
+      "currency": "USD",
+      "version": "ebay-us-store-2026-07-v1",
+      "effectiveDate": "2026-07-01",
+      "lastVerifiedDate": "2026-08-14",
+      "reviewIntervalDays": 60
+    }
+  },
+  "checkedAt": "2026-08-14T00:00:00.000Z",
+  "sourceCheckedAt": {
+    "etsy": "2026-08-14T00:00:00.000Z",
+    "ebay": "2026-08-14T00:00:00.000Z",
+    "ebayStore": "2026-08-14T00:00:00.000Z"
+  },
+  "sourceStatus": {
+    "etsy": "verified",
+    "ebay": "verified",
+    "ebayStore": "verified"
+  },
+  "sourceMessages": {
+    "etsy": null,
+    "ebay": null,
+    "ebayStore": null
+  },
+  "etsy": {
+    "listingFee": 20,
+    "transactionRateBps": 650,
+    "paymentProcessingRateBps": 300,
+    "paymentProcessingFixedFee": 25,
+    "offsiteAdsStandardRateBps": 1500,
+    "offsiteAdsReducedRateBps": 1200,
+    "offsiteAdsCap": 10000
+  },
+  "ebay": {
+    "insertionFee": 35,
+    "orderFeeThreshold": 1000,
+    "orderFeeAtOrBelow": 30,
+    "orderFeeAbove": 40,
+    "categories": {
+      "most": {
+        "id": "most",
+        "label": "Most categories",
+        "firstRateBps": 1360,
+        "breakpoint": 750000,
+        "secondRateBps": 235,
+        "mode": "tiered"
+      },
+      "books-media": {
+        "id": "books-media",
+        "label": "Books, movies & music",
+        "firstRateBps": 1530,
+        "breakpoint": 750000,
+        "secondRateBps": 235,
+        "mode": "tiered"
+      },
+      "collectibles": {
+        "id": "collectibles",
+        "label": "Cards & select collectibles",
+        "firstRateBps": 1325,
+        "breakpoint": 750000,
+        "secondRateBps": 235,
+        "mode": "tiered"
+      },
+      "jewelry": {
+        "id": "jewelry",
+        "label": "Jewelry (excluding watches)",
+        "firstRateBps": 1500,
+        "breakpoint": 500000,
+        "secondRateBps": 900,
+        "mode": "switch"
+      },
+      "guitars": {
+        "id": "guitars",
+        "label": "Guitars & basses",
+        "firstRateBps": 670,
+        "breakpoint": 750000,
+        "secondRateBps": 235,
+        "mode": "tiered"
+      }
+    },
+    "storeCategories": {
+      "most": {
+        "id": "most",
+        "label": "Most categories",
+        "firstRateBps": 1270,
+        "breakpoint": 250000,
+        "secondRateBps": 235,
+        "mode": "tiered"
+      },
+      "books-media": {
+        "id": "books-media",
+        "label": "Books, movies & music",
+        "firstRateBps": 1530,
+        "breakpoint": 250000,
+        "secondRateBps": 235,
+        "mode": "tiered"
+      },
+      "collectibles": {
+        "id": "collectibles",
+        "label": "Trading cards & select collectibles",
+        "firstRateBps": 1235,
+        "breakpoint": 250000,
+        "secondRateBps": 235,
+        "mode": "tiered"
+      },
+      "jewelry": {
+        "id": "jewelry",
+        "label": "Most jewelry & watches",
+        "firstRateBps": 1300,
+        "breakpoint": 500000,
+        "secondRateBps": 700,
+        "mode": "switch"
+      },
+      "guitars": {
+        "id": "guitars",
+        "label": "Guitars & basses",
+        "firstRateBps": 670,
+        "breakpoint": 250000,
+        "secondRateBps": 235,
+        "mode": "tiered"
+      }
+    },
+    "sellerPlans": {
+      "no-store": {
+        "id": "no-store",
+        "label": "No Store",
+        "insertionFee": 35,
+        "categorySchedule": "standard"
+      },
+      "starter": {
+        "id": "starter",
+        "label": "Starter Store",
+        "insertionFee": 30,
+        "categorySchedule": "standard"
+      },
+      "basic": {
+        "id": "basic",
+        "label": "Basic Store",
+        "insertionFee": 25,
+        "categorySchedule": "store"
+      },
+      "premium": {
+        "id": "premium",
+        "label": "Premium Store",
+        "insertionFee": 10,
+        "categorySchedule": "store"
+      },
+      "anchor": {
+        "id": "anchor",
+        "label": "Anchor Store",
+        "insertionFee": 5,
+        "categorySchedule": "store"
+      },
+      "enterprise": {
+        "id": "enterprise",
+        "label": "Enterprise Store",
+        "insertionFee": 5,
+        "categorySchedule": "store"
+      }
+    },
+    "performanceSurcharges": {
+      "meeting": 0,
+      "below-standard": 600,
+      "below-standard-long-term": 700,
+      "very-high-inad": 500,
+      "very-high-inad-long-term": 600
+    }
+  }
+}

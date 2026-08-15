@@ -1,0 +1,17 @@
+{
+  "name": "SellerMargin",
+  "short_name": "SellerMargin",
+  "description": "Know what you make. Know what to charge.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f6f8fc",
+  "theme_color": "#234f8b",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

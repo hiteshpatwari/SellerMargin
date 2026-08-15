@@ -1,0 +1,37 @@
+{
+  "name": "seller-margin",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build && node scripts/build-sites.mjs",
+    "build:cloudflare": "pnpm build",
+    "cloudflare:dev": "pnpm build:cloudflare && wrangler dev",
+    "cloudflare:deploy": "pnpm build:cloudflare && wrangler deploy",
+    "lint": "oxlint src worker scripts --deny-warnings",
+    "test": "vitest run",
+    "test:e2e": "playwright test",
+    "test:live-fees": "vitest run --config vitest.live.config.ts",
+    "test:watch": "vitest",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "lucide-react": "^1.31.0",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.13.0",
+    "@playwright/test": "^1.62.1",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.4",
+    "@vitejs/plugin-react": "^6.0.5",
+    "esbuild": "^0.28.2",
+    "oxlint": "^1.78.0",
+    "typescript": "^7.0.2",
+    "vite": "^8.2.1",
+    "vitest": "^4.1.10",
+    "wrangler": "^4.123.0"
+  }
+}
